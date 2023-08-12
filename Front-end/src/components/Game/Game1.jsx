@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Game1.css";
-import Navbar from "../Navbar/Navbar";
 
 const Game1 = () => {
   const navigate = useNavigate();
@@ -37,16 +36,20 @@ const Game1 = () => {
   const [hits, setHits] = useState(0);
   const [clicks, setClicks] = useState(0);
   const [misses, setMisses] = useState(0);
+  const [isStart, setStart] = useState(false);
 
   useEffect(() => {
-    const timerId = setInterval(() => {
-      setTimer((state) => state + 1);
-    }, 1000);
+    let timerId;
+    if (isStart) {
+      timerId = setInterval(() => {
+        setTimer((state) => state + 1);
+      }, 1000);
+    }
 
     return () => {
       clearInterval(timerId);
     };
-  }, []);
+  }, [isStart]);
 
   const updateValues = (index) => {
     console.log(letter[index]);
@@ -73,6 +76,8 @@ const Game1 = () => {
     setLetter(randomChar);
   };
 
+  const accuracy = clicks === 0 ? 0 : ((hits / clicks) * 100).toFixed(2);
+
   return (
     <div className="gradient-bg-welcome">
       <div>
@@ -89,13 +94,13 @@ const Game1 = () => {
               </div>
               <div className="score_card">
                 <span>Miss: &nbsp;</span>
-                <span class="score1">{hits}</span>
+                <span class="score1">{misses}</span>
               </div>
             </div>
             <div className="flex flex-col">
               <div className="score_card">
                 <span>Accuracy: &nbsp;</span>
-                <span class="score1">{hits}</span>
+                <span class="score1">{accuracy}%</span>
               </div>
               <div className="score_card">
                 <span>Timer: &nbsp;</span>
@@ -104,18 +109,33 @@ const Game1 = () => {
             </div>
           </div>
         </div>
-        {/* {timer > 15 && navigate("/child/game2")} */}
-        <div class="grid1">
-          {letter &&
-            letter.map((item, index) => (
-              <div class="box1" onClick={() => handleClick(index)}>
-                <h1>{letter[index]}</h1>
-              </div>
-            ))}
-        </div>
+        {/* Start button */}
+        {!isStart ? (
+          <div className="game1_start">
+            <button
+              className="game1_start_btn action_btn"
+              onClick={() => {
+                setStart(true);
+              }}
+            >
+              Start
+            </button>
+          </div>
+        ) : (
+          // Render the grid if isStart is true
+          <div class="grid1">
+            {letter &&
+              letter.map((item, index) => (
+                <div class="box1" onClick={() => handleClick(index)}>
+                  <h1>{letter[index]}</h1>
+                </div>
+              ))}
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
 export default Game1;
+
