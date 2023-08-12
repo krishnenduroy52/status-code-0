@@ -129,7 +129,7 @@ const Navbar = () => {
               <a href="/general/chat">General</a>
             </li>
             <li>
-              <a href="/about">About</a>
+              <a href="/contribute">Contrbute</a>
             </li>
             <li>
               <a href="/contact">Contact Us</a>
