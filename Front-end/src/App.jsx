@@ -6,16 +6,18 @@ import Footer from "./components/Footer/Footer";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Contribute from "./components/Contribute/Contribute";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <Router>
-      <Navbar/>
-        <Routes>
-          <Route path="/contribute" element={<Contribute />} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/signup" element={<Signup />} />
-        </Routes>
+      <Navbar />
+      <Routes>
+        <Route exect path="/" element={<Home />} />
+        <Route path="/contribute" element={<Contribute />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
       <Footer />
     </Router>
   );
