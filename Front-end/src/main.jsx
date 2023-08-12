@@ -5,10 +5,12 @@ import "./index.css";
 
 import Context from "./context/context.jsx";
 
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Context>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <ToastContainer position="bottom-right" theme="colored" />
+    <App />
   </Context>
 );

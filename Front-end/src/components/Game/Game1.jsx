@@ -76,7 +76,6 @@ const Game1 = () => {
   return (
     <div className="gradient-bg-welcome">
       <div>
-        <Navbar />
         <div className="game1_info">
           <div className="game1_info_title">
             Click on 'b' out of other characture

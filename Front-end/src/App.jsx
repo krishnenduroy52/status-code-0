@@ -18,9 +18,13 @@ import DoctorLogin from "./pages/Doctor/DoctorLogin";
 import DoctorSignup from "./pages/Doctor/DoctorSignup";
 import DoctorDashboard from "./pages/Doctor/DoctorDashboard";
 import Meet from "./pages/Meet/Meet";
-import Rooms from "./pages/Rooms/Rooms"
-import Contact from "./pages/ContactUs/Contact"
-import Error from "./components/404NotFound/Error"
+import Rooms from "./pages/Rooms/Rooms";
+import Contact from "./pages/ContactUs/Contact";
+import Predict from "./components/Predict/Predict";
+import Error from "./components/404NotFound/Error";
+import Game1 from "./components/Game/Game1";
+import Game2 from "./components/Game/Game2";
+import Game3 from "./components/Game/Game3";
 
 function App() {
   return (
@@ -36,15 +40,20 @@ function App() {
         <Route path="/prediction/cancer" element={<Cancer />} />
         <Route path="/general/chat" element={<Chat />} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/appointment" element={<Appointment/>} />
+        <Route path="/appointment" element={<Appointment />} />
         <Route path="/contribute" element={<Contribute />} />
-        <Route path="/doctor/login" element={<DoctorLogin/>} />
-        <Route path="/doctor/signup" element={<DoctorSignup/>} />
-        <Route path="/doctor/dashboard" element={<DoctorDashboard/>} />
-        <Route path="/meet" element={<Meet/>} />
+        <Route path="/doctor/login" element={<DoctorLogin />} />
+        <Route path="/doctor/signup" element={<DoctorSignup />} />
+        <Route path="/doctor/dashboard" element={<DoctorDashboard />} />
+        <Route path="/meet" element={<Meet />} />
         <Route path="/rooms/:roomId" element={<Rooms />} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="*" element={<Error/>} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/prediction/dyslexia" element={<Predict />} />
+        <Route path="/child/game1" element={<Game1 />} />
+        <Route path="/child/game2" element={<Game2 />} />
+        <Route path="/child/game3" element={<Game3 />} />
+        {/* <Route path="/child/game4" element={<Game4 />} /> */}
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </Router>

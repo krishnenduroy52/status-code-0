@@ -75,7 +75,6 @@ const Game2 = () => {
   return (
     <div className="gradient-bg-welcome">
       <div className="">
-        <Navbar />
         <div className="game1_info">
           <div className="game1_info_title">
             Click on 'b' out of other characture
@@ -100,7 +99,7 @@ const Game2 = () => {
             </div>
           </div>
         </div>
-        {/* {timer > 15 && navigate("/child/game3 ")} */}
+        {timer > 15 && navigate("/child/game3 ")}
         <div class="grid1">
           {letter &&
             letter.map((item, index) => (

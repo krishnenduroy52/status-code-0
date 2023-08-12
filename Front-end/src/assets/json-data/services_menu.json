@@ -29,6 +29,12 @@
             "className":"fa-solid fa-brain-circuit",
             "title": "General Chat",
             "url":"general/chat"
+        },
+        {
+            "className":"fa-solid fa-brain-circuit",
+            "title": "Dyslexia",
+            "url":"/prediction/dyslexia"
+
         }
     ]
 }
