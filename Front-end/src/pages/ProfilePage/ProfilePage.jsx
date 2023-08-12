@@ -135,7 +135,7 @@ export default function ProfilePage() {
     try {
       // Perform save operation or API call with editedData
       const response = await fetch(
-        `https://doctorai-392406.uw.r.appspot.com/user/${userData._id}`,
+        `http://localhost:3001/user/${userData._id}`,
         {
           method: "PUT",
           headers: {

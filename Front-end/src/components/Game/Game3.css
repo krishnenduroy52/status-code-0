@@ -21,9 +21,9 @@
   font-weight: bold;
 }
 
-.wrong-answer{
-    color: red;
-    font-weight: bold;
+.wrong-answer {
+  color: red;
+  font-weight: bold;
 }
 
 input {
@@ -36,7 +36,7 @@ button {
   margin-top: 10px;
   padding: 8px 16px;
   font-size: 16px;
-  background-color: #007bff;
+  background-color: #6e2640;
   color: #fff;
   border: none;
   cursor: pointer;
