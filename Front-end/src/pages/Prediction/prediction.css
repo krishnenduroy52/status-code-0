@@ -71,8 +71,8 @@ hr {
   padding: 1em 2.1em 1.1em;
   border-radius: 4px;
   margin: 8px;
-  border: 2px solid #016cff;
-  background-color: #016cff;
+  border: 2px solid #6e2640;
+  background-color: #6e2640;
   color: #fff;
   font-weight: 800;
   font-size: 0.85em;
@@ -83,7 +83,7 @@ hr {
 .predict-appointment:hover,
 .upload-btn:hover {
   background-color: transparent;
-  color: #016cff;
+  color: #6e2640;
   cursor: pointer;
 }
 

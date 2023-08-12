@@ -25,6 +25,7 @@ import Error from "./components/404NotFound/Error";
 import Game1 from "./components/Game/Game1";
 import Game2 from "./components/Game/Game2";
 import Game3 from "./components/Game/Game3";
+import Game4 from "./components/Game/Game4";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/child/game1" element={<Game1 />} />
         <Route path="/child/game2" element={<Game2 />} />
         <Route path="/child/game3" element={<Game3 />} />
+        <Route path="/child/game4" element={<Game4 />} />
         {/* <Route path="/child/game4" element={<Game4 />} /> */}
         <Route path="*" element={<Error />} />
       </Routes>
