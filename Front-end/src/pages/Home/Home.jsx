@@ -10,9 +10,9 @@ import services_menu from "./../../assets/json-data/services_menu.json";
 import heroImage from "./../../assets/Images/doctor-hero.svg";
 import waveImg from "./../../assets/Images/wave.svg";
 import gif from "./../../assets/Images/doctor-application.gif";
-// import Chat from "../../components/Chat/Chat";
+import Chat from "../../components/Chat/Chat";
 import { useEffect, useState } from "react";
-// import Review from "../../components/Review/Review";
+import Review from "../../components/Review/Review";
 
 // Three js import
 import { Canvas } from "@react-three/fiber";
@@ -42,9 +42,9 @@ const Home = () => {
 
   return (
     <>
-      {/* {isPopupOpen && (
+      {isPopupOpen && (
         <Review onClose={closePopup} appointmentId={appointmentId} />
-      )} */}
+      )}
       <div className="home">
         {/* Top Body */}
         <section className="home_main gradient-bg-welcome">
