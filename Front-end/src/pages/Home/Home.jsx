@@ -182,7 +182,9 @@ const Home = () => {
           </div>
         </div>
         <hr />
-        <div className="chat_container">{/* <Chat /> */}</div>
+        <div className="chat_container">
+          <Chat />
+        </div>
         <div className="bottomBody">
           {/* About */}
           <div className="faq">

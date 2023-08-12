@@ -129,10 +129,9 @@ a {
   display: none;
   transition: height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* 
-  .dropdown_menu a{
-    color: #fff; */
-/* } */
+.dropdown_menu ul {
+  padding-left: 0rem !important;
+}
 
 .dropdown_menu ul li {
   padding: 0.6rem;
@@ -181,6 +180,9 @@ a {
   display: block;
 }
 
+.services_options ul {
+  padding-left: 0rem !important;
+}
 .services_options > ul li {
   color: #000;
   padding: clamp(0.5rem, 1vw, 1rem);

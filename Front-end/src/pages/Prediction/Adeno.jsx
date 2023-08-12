@@ -69,7 +69,7 @@ function Adeno() {
     onDragLeave: () => setIsDraggingOver(false),
   });
   return (
-    <div>
+    <div className="main-container gradient-bg-welcome">
       <div className="chat_header_text">
         <h2>
           AI Health Assistant for{" "}
