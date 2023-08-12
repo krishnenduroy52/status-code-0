@@ -1,6 +1,6 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../assets/Images/doctorai_logo.svg";
+import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -44,7 +44,7 @@ const Footer = () => {
             <label htmlFor="Products">Products</label>
             <ul id="Products">
               {services_menu.items.map((item, index) => (
-                  <li key={index}>
+                <li key={index}>
                   <Link className="product-link" to={item.url}>
                     {item.title}
                   </Link>
