@@ -162,7 +162,7 @@ const Home = () => {
           </div>
           <div className="models">
             {services_menu.items.map((item, index) => {
-              if (index !== services_menu.items.length - 1) {
+              if (index < 4) {
                 return (
                   <button
                     key={index}

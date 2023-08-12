@@ -21,9 +21,9 @@
   font-weight: bold;
 }
 
-.wrong-answer{
-    color: red;
-    font-weight: bold;
+.wrong-answer {
+  color: red;
+  font-weight: bold;
 }
 
 input {
@@ -32,7 +32,7 @@ input {
   font-size: 16px;
 }
 
-button {
+.btn {
   margin-top: 10px;
   padding: 8px 16px;
   font-size: 16px;
@@ -43,6 +43,13 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.Game3-btn {
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.Game3-btn:hover {
   background-color: #0056b3;
 }

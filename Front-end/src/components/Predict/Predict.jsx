@@ -1,7 +1,7 @@
 import React from "react";
 import "./Predict.css";
 import { Link } from "react-router-dom";
-import Navbar from "../Navbar/Navbar";
+import { AiFillPlayCircle } from "react-icons/ai";
 const companyCommonStyles =
   "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
@@ -19,6 +19,10 @@ const Predict = () => {
               <p className="text-left mt-5 text-white font-light md:w-9/12 w-11/12 text-base">
                 Explore the ML world. Contribute your best trained models here.
               </p>
+              <Link className="predictBtn" to="/child/game1">
+                <AiFillPlayCircle className="text-white mr-2" />
+                play
+              </Link>
 
               <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
                 <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
@@ -41,9 +45,9 @@ const Predict = () => {
         </div>
       </div>
 
-      <Link to="/child/game1" className="btn">
+      {/* <Link to="/child/game1" className="btn action_btn">
         Play Now
-      </Link>
+      </Link> */}
     </div>
   );
 };

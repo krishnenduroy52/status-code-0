@@ -127,11 +127,15 @@ const Game3 = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button onClick={checkAnswer}>Check</button>
+          <button onClick={checkAnswer} className="Game3-btn">
+            Check
+          </button>
         </>
       )}
       {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
-        <button onClick={nextWord}>Next Word</button>
+        <button onClick={nextWord} className="Game3-btn">
+          Next Word
+        </button>
       )}
     </div>
   );

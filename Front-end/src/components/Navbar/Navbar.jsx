@@ -83,9 +83,9 @@ const Navbar = () => {
         <div className="topNav">
           {/* logo */}
           <div className="logo">
-            <a href="/">
+            <Link to="/">
               <img src={logo} alt="" />
-            </a>
+            </Link>
           </div>
           {/* menu */}
           <ul className="links">
@@ -126,13 +126,13 @@ const Navbar = () => {
               )}
             </li>
             <li>
-              <a href="/general/chat">General</a>
+              <Link to="/general/chat">General</Link>
             </li>
             <li>
-              <a href="/contribute">Contrbute</a>
+              <Link to="/contribute">Contrbute</Link>
             </li>
             <li>
-              <a href="/contact">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </li>
           </ul>
           {/* signup */}
