@@ -118,7 +118,7 @@ hr {
 }
 
 .save_edit {
-    background-color: rgb(165, 204, 255);
+    background-color: #a05772;
 
     padding: 5px 15px;
     border-radius: 5px;
@@ -174,7 +174,7 @@ a {
 }
 
 .card-hr {
-    color: blue;
+    color: #6e2640;
     margin: 0.5rem 0;
 }
 
