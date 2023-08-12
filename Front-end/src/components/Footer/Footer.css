@@ -93,7 +93,7 @@
 }
 
 .product-link:hover {
-  color: #016cff;
+  color: #6e2640;
 }
 
 /* .social-media  */
@@ -132,7 +132,7 @@
 
 .social-media > ul > li:hover,
 .social-media > ul > li > a:hover {
-  color: #016cff;
+  color: #6e2640;
 }
 
 @media (max-width: 768px) {
