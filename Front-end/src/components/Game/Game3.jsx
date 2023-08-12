@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./game3.css";
 
 const words = ["apple", "banana", "cherry", "grape", "orange"];
-const maxAttempts = 6;
+const maxAttempts = words.length + 1;
 
 const Game3 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -107,7 +107,7 @@ const Game3 = () => {
           </div>
         </div>
       </div>
-      {/* {timer > 25 && navigate("/child/game2")} */}
+      {/* {timer > 25 && navigate("/child/game")} */}
       <div className="word-box">
         {isCorrect && <div className="correct-answer">Correct!</div>}
         {isWrong && (
