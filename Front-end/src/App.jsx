@@ -10,7 +10,7 @@ import Contribute from "./components/Contribute/Contribute";
 
 function App() {
   return (
-    <Router>
+    <Router className="gradient-bg-welcome">
       <Navbar />
       <Routes>
         <Route exect path="/" element={<Home />} />

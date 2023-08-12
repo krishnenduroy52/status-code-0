@@ -14,6 +14,11 @@ import Chat from "../../components/Chat/Chat";
 import { useEffect, useState } from "react";
 import Review from "../../components/Review/Review";
 
+// Three js import
+import { Canvas } from "@react-three/fiber";
+import Earth from "../../components/Earth.jsx";
+// import Brain from "../../components/Brain";
+
 const Home = () => {
   const navigate = useNavigate();
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -33,7 +38,7 @@ const Home = () => {
 
   const navigateTo = (url) => {
     navigate(url);
-  }
+  };
 
   return (
     <>
@@ -42,8 +47,98 @@ const Home = () => {
       )}
       <div className="home">
         {/* Top Body */}
-        <div className="topBody_container">
-          {/* hero section */}
+        <section className="home_main gradient-bg-welcome">
+          <div className="home_main_three">
+            <Canvas
+              className="home_main_canvas"
+              style={{ position: "absolute", zIndex: "1" }}
+            >
+              <ambientLight intensity={0.5} />
+              <Earth />
+              {/* <Brain /> */}
+              <directionalLight position={[-45, 20, 20]} intensity={1} />
+            </Canvas>
+            <div className="home_main__container">
+              <div className="home_main__container__left">
+                <div className="home_main__container__left__social">
+                  <a>
+                    <span>F</span>
+                    <span>A</span>
+                    <span>C</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>M</span>
+                  </a>
+                </div>
+                <div className="home_main__container__left__social">
+                  <a>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>M</span>
+                  </a>
+                </div>
+                <div className="home_main__container__left__social">
+                  <a>
+                    <span>I</span>
+                    <span>N</span>
+                    <span>S</span>
+                    <span>T</span>
+                    <span>I</span>
+                    <span>G</span>
+                    <span>R</span>
+                    <span>A</span>
+                    <span>M</span>
+                  </a>
+                </div>
+              </div>
+              <div className="home_main__container__middle">
+                <div className="home_main__container__middle__top">
+                  <p>Mental Health</p>
+                </div>
+                <div className="home_main__container__middle__hero">
+                  <h1>
+                    Discovering
+                    <br />
+                    Bright Minds
+                    <br />
+                    Learn Together
+                  </h1>
+                </div>
+                <div className="home_main__container__middle__bottom">
+                  <p>
+                    Taking care of your mental health is just as important as
+                    taking care of your physical health.
+                    <br />
+                    Here are some tips to help you improve your mental health.
+                  </p>
+                </div>
+              </div>
+              <div className="home_main__container__right">
+                <div className="home_main__container__right_top">
+                  <strong>Dyslexics</strong> have a great ability to sense,
+                  <br /> understand, and respond to
+                  <br /> how people feel.
+                </div>
+                <div className="home_main__container__right_bottom">
+                  <p className="home_main__container__right_bottom_number">
+                    200k
+                  </p>
+                  <p>Children suffering from dyslexia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <div className="topBody_container">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
           <div className="topBody">
             <img src={heroImage} alt="" />
             <div className="hero-text">
@@ -58,7 +153,7 @@ const Home = () => {
             </div>
           </div>
           <img className="wave-img" src={waveImg} alt="" />
-        </div>
+        </div> */}
         {/* Models Section */}
         <div className="modelSection">
           {/* Models */}
@@ -73,7 +168,11 @@ const Home = () => {
             {services_menu.items.map((item, index) => {
               if (index !== services_menu.items.length - 1) {
                 return (
-                  <button key={index} className="CtScan" onClick={() => navigateTo(item.url)}>
+                  <button
+                    key={index}
+                    className="CtScan"
+                    onClick={() => navigateTo(item.url)}
+                  >
                     <img src={item.src} />
                     <p>{item.title}</p>
                   </button>
@@ -83,9 +182,7 @@ const Home = () => {
           </div>
         </div>
         <hr />
-        <div className="chat_container">
-          <Chat />
-        </div>
+        <div className="chat_container">{/* <Chat /> */}</div>
         <div className="bottomBody">
           {/* About */}
           <div className="faq">
