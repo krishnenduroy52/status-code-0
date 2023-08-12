@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
+import Home from "./pages/Home/Home"
 import Contribute from "./components/Contribute/Contribute";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <Router>
       <Navbar/>
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/contribute" element={<Contribute />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/signup" element={<Signup />} />
