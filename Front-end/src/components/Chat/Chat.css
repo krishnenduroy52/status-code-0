@@ -3,13 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  padding: 50px 0;
   /* margin: 0 150px; */
 }
 .chat_header_text {
   text-align: center;
-  margin: 60px 0;
-  padding: 0 90px;
+  padding: 60px 90px;
 }
 .chat_header_text h2 {
   font-size: clamp(2rem, calc(6vw - 12px), 4rem);
@@ -209,7 +208,7 @@ input:focus {
   .chat_container {
     width: 100%;
     padding: clamp(0.5rem, calc(6vw - 12px), 1rem);
-    margin: 0px !important;
+    padding: 0px !important;
   }
   .chat_header_text {
     padding: 10px;
