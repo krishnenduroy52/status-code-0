@@ -1,7 +1,11 @@
 import "./Home.css";
+
 import { Link, useNavigate } from "react-router-dom";
+
 import FAQSection from "./../../components/FAQSection/FAQSection.jsx";
+
 import faqData from "./../../assets/json-data/faqData.json";
+
 import services_menu from "./../../assets/json-data/services_menu.json";
 import heroImage from "./../../assets/Images/doctor-hero.svg";
 import waveImg from "./../../assets/Images/wave.svg";
