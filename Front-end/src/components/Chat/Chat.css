@@ -47,7 +47,7 @@
   padding: 5px 13px;
   border-radius: 6px;
   color: #2e2e2e;
-  background-color: #4480d9;
+  background-color: #68253c;
   color: white;
 }
 .btnChat:hover {
@@ -86,7 +86,7 @@
 }
 
 .gpt div {
-  background-color: #4480d9;
+  background-color: #68253c;
   padding: 5px;
   border-radius: 8px;
   max-width: 75%;
@@ -110,7 +110,7 @@
   margin-right: 4px;
 }
 .me div {
-  background-color: #4480d9;
+  background-color: #68253c;
   padding: 5px;
   border-radius: 8px;
   max-width: 75%;

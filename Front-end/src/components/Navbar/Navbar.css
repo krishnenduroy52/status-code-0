@@ -13,7 +13,7 @@
 }
 
 .links > li > a:hover {
-  color: #0a6ebd;
+  color: #6e2640;
 }
 
 .links > li > a::after {
@@ -31,7 +31,7 @@
 
 .links > li > a:hover::after {
   width: 110%;
-  background-color: #0a6ebd;
+  background-color: #6e2640;
 }
 
 a {
@@ -97,10 +97,10 @@ a {
 }
 
 .action_btn {
-  background-color: #0a6ebd;
+  background-color: #6e2640;
   color: #fff;
   padding: 0.4rem 2rem;
-  border: 2px solid #0a6ebd;
+  border: 2px solid #6e2640;
   outline: none;
   border-radius: 20px;
   font-size: 1rem;
@@ -110,7 +110,7 @@ a {
 }
 
 .action_btn:hover {
-  color: #0a6ebd;
+  color: #6e2640;
   background-color: #fff;
 }
 
