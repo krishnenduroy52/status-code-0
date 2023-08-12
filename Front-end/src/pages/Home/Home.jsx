@@ -65,12 +65,11 @@ const Home = () => {
                     <span>F</span>
                     <span>A</span>
                     <span>C</span>
-                    <span>T</span>
-                    <span>I</span>
-                    <span>G</span>
-                    <span>R</span>
-                    <span>A</span>
-                    <span>M</span>
+                    <span>E</span>
+                    <span>B</span>
+                    <span>O</span>
+                    <span>O</span>
+                    <span>K</span>
                   </a>
                 </div>
                 <div className="home_main__container__left__social">
@@ -88,15 +87,12 @@ const Home = () => {
                 </div>
                 <div className="home_main__container__left__social">
                   <a>
-                    <span>I</span>
-                    <span>N</span>
-                    <span>S</span>
                     <span>T</span>
+                    <span>W</span>
                     <span>I</span>
-                    <span>G</span>
-                    <span>R</span>
-                    <span>A</span>
-                    <span>M</span>
+                    <span>T</span>
+                    <span>T</span>
+                    <span>E</span>
                   </a>
                 </div>
               </div>
