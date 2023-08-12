@@ -7,11 +7,10 @@ import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import Home from "./pages/Home/Home";
 import Contribute from "./components/Contribute/Contribute";
-import Home from "./pages/Home/Home";
 
 function App() {
   return (
-    <Router>
+    <Router className="gradient-bg-welcome">
       <Navbar />
       <Routes>
         <Route exect path="/" element={<Home />} />

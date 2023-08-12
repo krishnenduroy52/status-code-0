@@ -46,6 +46,12 @@
     radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 1) 0, transparent 50%);
 }
 
+.gradient-bg-navbar {
+  background: rgb(0, 0, 0);
+  padding: 10px 0;
+  padding-bottom: 10px;
+}
+
 .gradient-bg-services {
   background-color: #0f0e13;
   background-image: radial-gradient(
