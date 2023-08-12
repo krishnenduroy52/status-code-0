@@ -78,29 +78,33 @@ const Game1 = () => {
       <div>
         <div className="game1_info">
           <div className="game1_info_title">
-            Click on 'b' out of other characture
+            <h1>Click on 'b' out of other character</h1>
           </div>
 
           <div className="game1_info_score">
-            <div>
-              <span>Correct</span>
-              <span class="score1">{hits}</span>
+            <div className="flex flex-col">
+              <div className="score_card">
+                <span>Correct: &nbsp;</span>
+                <span class="score1">{hits}</span>
+              </div>
+              <div className="score_card">
+                <span>Miss: &nbsp;</span>
+                <span class="score1">{hits}</span>
+              </div>
             </div>
-            <div>
-              <span>Miss</span>
-              <span class="score1">{hits}</span>
-            </div>
-            <div>
-              <span>Accuracy</span>
-              <span class="score1">{hits}</span>
-            </div>
-            <div>
-              <span>Time</span>
-              <span class="score1">{timer}</span>
+            <div className="flex flex-col">
+              <div className="score_card">
+                <span>Accuracy: &nbsp;</span>
+                <span class="score1">{hits}</span>
+              </div>
+              <div className="score_card">
+                <span>Timer: &nbsp;</span>
+                <span class="score1">{timer}</span>
+              </div>
             </div>
           </div>
         </div>
-        {timer > 15 && navigate("/child/game2")}
+        {/* {timer > 15 && navigate("/child/game2")} */}
         <div class="grid1">
           {letter &&
             letter.map((item, index) => (

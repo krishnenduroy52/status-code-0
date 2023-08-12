@@ -113,7 +113,7 @@
   padding: clamp(4rem, calc(6vw - 12px), 5rem);
   height: clamp(8rem, calc(20vw - 12px), 12rem);
   width: minmax(clamp(8rem, calc(20vw - 12px), 13rem), 100%);
-  border: 2px solid #016cff;
+  border: 2px solid #6e2640;
   margin: 0 10px 0 0;
   border-radius: 15px;
   transition: all 0.3s ease;
