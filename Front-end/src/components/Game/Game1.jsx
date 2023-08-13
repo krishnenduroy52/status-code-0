@@ -125,7 +125,7 @@ const Game1 = () => {
           // Render the grid if isStart is true
 
           <div class="grid1">
-            {timer > 25 && navigate("/child/game2")}
+            {/* {timer > 25 && navigate("/child/game2")} */}
             {letter &&
               letter.map((item, index) => (
                 <div class="box1" onClick={() => handleClick(index)}>

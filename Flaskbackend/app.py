@@ -8,6 +8,7 @@ import numpy as np
 import os
 from flask_cors import CORS
 import json
+import joblib
 
 app = Flask(__name__)
 app.debug = True
@@ -35,6 +36,21 @@ class NumpyInt64Encoder(json.JSONEncoder):
         if isinstance(obj, np.int64):
             return int(obj)
         return super().default(obj)
+    
+dyslexia_model = joblib.load('Models/Dyslexia/dyslexia_model.pkl')
+
+@app.route('/predict-dyslexia', methods=['POST'])
+def predict_dyslexia():
+    # we are getting a array of 1D array. predict using that array in dylexia model
+    try:
+        data = request.json
+        if 'data' not in data:
+            return jsonify({'error': 'Missing input data'}), 400
+        input_array = data['data']
+        predictions = dyslexia_model.predict(input_array)
+        return jsonify({'predicted_class': predictions.tolist(), 'probability':100})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 
 @app.route('/predict-ct', methods=['POST'])
