@@ -81,34 +81,38 @@ const Game3 = () => {
   };
 
   return (
-    <div className="Game3">
-      <div className="game1_info">
-        <div className="game1_info_title">
+    <div className="gradient-bg-welcome">
+      <div className="game3_info">
+        <div className="game3_info_title">
           <p>Jumbled Words Game</p>
           <p>Unscramble the word below:</p>
         </div>
 
-        <div className="game1_info_score">
-          <div>
-            <span>Correct</span>
-            <span className="score1">{correctScore}</span>
+        <div className="game3_info_score">
+          <div className="flex flex-col">
+            <div className="score_card">
+              <span>Correct</span>
+              <span className="score1">{correctScore}</span>
+            </div>
+            <div className="score_card">
+              <span>Miss</span>
+              <span className="score1">{missScore}</span>
+            </div>
           </div>
-          <div>
-            <span>Miss</span>
-            <span className="score1">{missScore}</span>
-          </div>
-          <div>
-            <span>Accuracy</span>
-            <span className="score1">{calAccuracy()}</span>
-          </div>
-          <div>
-            <span>Time</span>
-            <span className="score1">{timer}</span>
+          <div className="flex flex-col">
+            <div className="score_card">
+              <span>Accuracy</span>
+              <span className="score1">{calAccuracy()}</span>
+            </div>
+            <div className="score_card">
+              <span>Time</span>
+              <span className="score1">{timer}</span>
+            </div>
           </div>
         </div>
       </div>
-      {/* {timer > 25 && navigate("/child/game")} */}
-      <div className="word-box">
+      {/* {timer > 25 && navigate("/child/game4")} */}
+      <div className="word-box flex justify-center text-white">
         {isCorrect && <div className="correct-answer">Correct!</div>}
         {isWrong && (
           <div className="wrong-answer">
@@ -120,23 +124,25 @@ const Game3 = () => {
           <div className="jumbled-word">{jumbledWord}</div>
         )}
       </div>
-      {!isCorrect && !isWrong && attempts < maxAttempts - 1 && (
-        <>
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-          />
-          <button onClick={checkAnswer} className="Game3-btn">
-            Check
+      <div className="w-full flex justify-center pb-2">
+        {!isCorrect && !isWrong && attempts < maxAttempts - 1 && (
+          <div className="w-full flex justify-center">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+            />
+            <button onClick={checkAnswer} className="Game3-btn">
+              Check
+            </button>
+          </div>
+        )}
+        {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
+          <button onClick={nextWord} className="Game3-btn">
+            Next Word
           </button>
-        </>
-      )}
-      {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
-        <button onClick={nextWord} className="Game3-btn">
-          Next Word
-        </button>
-      )}
+        )}
+      </div>
     </div>
   );
 };
