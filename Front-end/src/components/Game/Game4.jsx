@@ -54,11 +54,13 @@ const Game4 = () => {
         }
     };
 
-    const accuracy = ((score / (score + missed)) * 100).toFixed(2);
+    const accuracy = (score === 0 && missed === 0) ? 0 : ((score / (score + missed)) * 100).toFixed(2);
+
 
     return (
         <div className="game-container gradient-bg-welcome">
             <h1>Word Game</h1>
+            <h5>Choose the correct word below 👇</h5>
             {round < 6 ? (
                 <>
                     <div className="game1_info_score game4_info">

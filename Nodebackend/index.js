@@ -121,7 +121,7 @@ app.get("/user/:id", async (req, res) => {
 
 app.put("/user/:userId", async (req, res) => {
   const userId = req.params.userId;
-  const updatedData = req.body;
+  const updatedData= req.body;
 
   try {
     // Find the user by ID and update the data
