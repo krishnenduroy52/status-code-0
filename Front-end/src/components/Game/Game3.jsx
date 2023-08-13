@@ -19,16 +19,20 @@ const Game3 = () => {
   const [endTime, setEndTime] = useState(0);
   const [attempts, setAttempts] = useState(0);
   const [timer, setTimer] = useState(0);
+  const [isStart, setStart] = useState(false);
 
   useEffect(() => {
-    const timerId = setInterval(() => {
-      setTimer((state) => state + 1);
-    }, 1000);
+    let timerId;
+    if (isStart) {
+      timerId = setInterval(() => {
+        setTimer((state) => state + 1);
+      }, 1000);
+    }
 
     return () => {
       clearInterval(timerId);
     };
-  }, []);
+  }, [isStart]);
 
   function jumbleWord(word) {
     return word
@@ -80,69 +84,89 @@ const Game3 = () => {
     return (correctScore / (correctScore + missScore)) * 100 || 0;
   };
 
+  const isGameOver = attempts === maxAttempts - 1;
+
   return (
-    <div className="gradient-bg-welcome">
-      <div className="game3_info">
-        <div className="game3_info_title">
-          <p>Jumbled Words Game</p>
-          <p>Unscramble the word below:</p>
+    <div className="Game3 gradient-bg-welcome">
+      <div className="game1_info">
+        <div className="game1_info_title">
+          <h1>Jumbled Words Game</h1>
+          <h5>Unscramble the word below:</h5>
         </div>
 
-        <div className="game3_info_score">
+        <div className="game1_info_score">
           <div className="flex flex-col">
             <div className="score_card">
-              <span>Correct</span>
-              <span className="score1">{correctScore}</span>
+              <span>Correct: &nbsp;</span>
+              <span class="score1">{correctScore}</span>
             </div>
             <div className="score_card">
-              <span>Miss</span>
-              <span className="score1">{missScore}</span>
+              <span>Miss: &nbsp;</span>
+              <span class="score1">{missScore}</span>
             </div>
           </div>
           <div className="flex flex-col">
             <div className="score_card">
-              <span>Accuracy</span>
-              <span className="score1">{calAccuracy()}</span>
+              <span>Accuracy: &nbsp;</span>
+              <span class="score1">{calAccuracy()}%</span>
             </div>
             <div className="score_card">
-              <span>Time</span>
-              <span className="score1">{timer}</span>
+              <span>Timer: &nbsp;</span>
+              <span class="score1">{timer}</span>
             </div>
           </div>
         </div>
       </div>
-      {/* {timer > 25 && navigate("/child/game4")} */}
-      <div className="word-box flex justify-center text-white">
-        {isCorrect && <div className="correct-answer">Correct!</div>}
-        {isWrong && (
-          <div className="wrong-answer">
-            Wrong! The correct answer is: {words[currentIndex]}
-            {accuracyScore}%
-          </div>
-        )}
-        {!isCorrect && !isWrong && (
-          <div className="jumbled-word">{jumbledWord}</div>
-        )}
-      </div>
-      <div className="w-full flex justify-center pb-2">
-        {!isCorrect && !isWrong && attempts < maxAttempts - 1 && (
-          <div className="w-full flex justify-center">
-            <input
-              type="text"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-            <button onClick={checkAnswer} className="Game3-btn">
-              Check
-            </button>
-          </div>
-        )}
-        {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
-          <button onClick={nextWord} className="Game3-btn">
-            Next Word
+      {/* {timer > 25 && navigate("/child/game")} */}
+      {!isStart ? (
+        <div className="game1_start">
+          <button
+            className="game1_start_btn action_btn"
+            onClick={() => {
+              setStart(true);
+            }}
+          >
+            Start
           </button>
-        )}
-      </div>
+        </div>
+      ) : (
+        <div>
+          <div className="word-box">
+            {isCorrect && <div className="correct-answer">Correct!</div>}
+            {isWrong && (
+              <div className="wrong-answer check_btn">
+                Wrong! The correct answer is: {words[currentIndex]}
+              </div>
+            )}
+            {!isCorrect && !isWrong && !isGameOver && (
+              <div className="jumbled-word">{jumbledWord}</div>
+            )}
+          </div>
+          {!isCorrect && !isWrong && attempts < maxAttempts - 1 && (
+            <>
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+              />
+              <br />
+              <button className="action_btn check_btn" onClick={checkAnswer}>
+                Check
+              </button>
+            </>
+          )}
+          {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
+            <button onClick={nextWord} className="check_btn action_btn">
+              Next Word
+            </button>
+          )}
+        </div>
+      )}
+      {isGameOver && (
+        <div className="game3-over">
+          <h2>Game Over</h2>
+        </div>
+      )}
     </div>
   );
 };
