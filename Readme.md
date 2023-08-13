@@ -1,8 +1,8 @@
 <p align="center">
-  <h3 align="center">DOCTOR.AI</h3>
+  <h3 align="center">MedWise.Ai</h3>
 
   <p align="center">
-    <samp>A platform that dreams of empowering healthcare through Artificial Intellegence <a href="https://doctor-ai-frontend.vercel.app/">DOCTOR.AI</a></samp>
+    <samp>A platform that dreams of empowering healthcare through Artificial Intelligence <a href="">MedWISE.Ai</a></samp>
     <br />
     <a href="#routes"><strong>Explore our platform >>></strong></a>
     <br />
@@ -12,7 +12,7 @@
 </p>
 
 > ### Note:
-> Contributors : Krisnendu Roy, Indrajit Pal, Nivas
+> Contributors : Krisnendu Roy, Indrajit Pal and Nivas
 
 <h1> Some features of our platform </h1>
 
