@@ -150,12 +150,15 @@ const Game3 = () => {
                 onChange={(e) => setInputValue(e.target.value)}
               />
               <br />
-              <button className="action_btn check_btn" onClick={checkAnswer}>Check</button>
+              <button className="action_btn check_btn" onClick={checkAnswer}>
+                Check
+              </button>
             </>
-
           )}
           {(isCorrect || isWrong) && attempts < maxAttempts - 1 && (
-            <button onClick={nextWord} className="check_btn action_btn">Next Word</button>
+            <button onClick={nextWord} className="check_btn action_btn">
+              Next Word
+            </button>
           )}
         </div>
       )}

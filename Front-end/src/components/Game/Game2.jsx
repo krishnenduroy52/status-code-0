@@ -81,7 +81,7 @@ const Game2 = () => {
       <div className="">
         <div className="game1_info">
           <div className="game1_info_title">
-          <h1>Click on 'F' out of other character</h1>
+            <h1>Click on 'F' out of other character</h1>
           </div>
 
           <div className="game1_info_score">
@@ -122,6 +122,7 @@ const Game2 = () => {
         ) : (
           // Render the grid if isStart is true
           <div class="grid1">
+            {timer > 25 && navigate("/child/game3")}
             {letter &&
               letter.map((item, index) => (
                 <div class="box1" onClick={() => handleClick(index)}>

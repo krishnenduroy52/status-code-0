@@ -1,0 +1,17 @@
+.predictBtn {
+  background-color: blue;
+  border: none;
+  display: flex !important;
+  flex-direction: row;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 10px;
+}

@@ -21,12 +21,6 @@
         },
         {
             "className":"fa-solid fa-brain-circuit",
-            "title": "Pneumonia Prediction",
-            "url": "/prediction/pneumonia",
-            "src": "https://i.imgur.com/QHUQdYy.png"
-        },
-        {
-            "className":"fa-solid fa-brain-circuit",
             "title": "General Chat",
             "url":"general/chat"
         },
