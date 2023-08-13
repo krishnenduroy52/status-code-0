@@ -374,7 +374,7 @@ export default function ProfilePage() {
                               />
                             </div>
                             <div className="user-info__basic">
-                              <h5 className="mb-0">{item.doctor.username}</h5>
+                              <h5 className="mb-0 profile_page_last">{item.doctor.username}</h5>
                               <p className="text-muted mb-0">
                                 {calculateAge(item.doctor.dob)} yrs,{" "}
                                 {item.doctor.gender} {", "} {item.doctor.feedback.rating} {<FontAwesomeIcon icon={faStar} style={{color: "#ffcf66",}} />} 

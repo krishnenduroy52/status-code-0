@@ -190,3 +190,7 @@ a {
     background-color: rgba(128, 128, 128, 0.43) !important;
     font-weight: 600;
 }
+
+.profile_page_last{
+    color: black;
+}
