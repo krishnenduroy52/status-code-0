@@ -5,6 +5,19 @@
   padding: 20px;
 }
 
+.game-container p{
+  color: white;
+}
+
+h1 {
+  margin-top: 100px;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
 .word-pair {
   display: flex;
   justify-content: space-between;
@@ -24,4 +37,20 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.game4_info{
+  color: white;
+}
+
+.game4_btn{
+  margin-right: 10px;
+}
+
+.word-options{
+  margin-bottom: 100px;
+}
+
+.game4-over{
+  color: white;
 }

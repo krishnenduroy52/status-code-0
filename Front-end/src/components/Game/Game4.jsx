@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './game4.css';
 
 const wordsList = [
@@ -15,6 +15,22 @@ const Game4 = () => {
     const [score, setScore] = useState(0);
     const [missed, setMissed] = useState(0);
     const [currentPair, setCurrentPair] = useState(wordsList[0]);
+    const [isStart, setStart] = useState(false);
+    const [timer, setTimer] = useState(0);
+
+
+    useEffect(() => {
+        let timerId;
+        if (isStart) {
+            timerId = setInterval(() => {
+                setTimer((state) => state + 1);
+            }, 1000);
+        }
+
+        return () => {
+            clearInterval(timerId);
+        };
+    }, [isStart]);
 
     const handleOptionClick = (isCorrect) => {
         if (isCorrect) {
@@ -41,19 +57,39 @@ const Game4 = () => {
     const accuracy = ((score / (score + missed)) * 100).toFixed(2);
 
     return (
-        <div className="game-container">
+        <div className="game-container gradient-bg-welcome">
             <h1>Word Game</h1>
             {round < 6 ? (
                 <>
-                    <p>Round: {round}</p>
-                    <p>Score: {score}</p>
+                    <div className="game1_info_score game4_info">
+                        <div className="flex flex-col">
+                            <div className="score_card">
+                                <span>Correct: &nbsp;</span>
+                                <span class="score1">{score}</span>
+                            </div>
+                            <div className="score_card">
+                                <span>Miss: &nbsp;</span>
+                                <span class="score1">{missed}</span>
+                            </div>
+                        </div>
+                        <div className="flex flex-col">
+                            <div className="score_card">
+                                <span>Accuracy: &nbsp;</span>
+                                <span class="score1">{accuracy}%</span>
+                            </div>
+                            <div className="score_card">
+                                <span>Timer: &nbsp;</span>
+                                <span class="score1">{timer}</span>
+                            </div>
+                        </div>
+                    </div>
                     <div className="word-options">
-                        <button onClick={() => handleOptionClick(true)}>{currentPair.correct}</button>
-                        <button onClick={() => handleOptionClick(false)}>{currentPair.incorrect}</button>
+                        <button className="action_btn game4_btn" onClick={() => handleOptionClick(true)}>{currentPair.correct}</button>
+                        <button className='action_btn' onClick={() => handleOptionClick(false)}>{currentPair.incorrect}</button>
                     </div>
                 </>
             ) : (
-                <div className="game-over">
+                <div className="game4-over">
                     <h2>Game Over</h2>
                     <p>Correct Score: {score}</p>
                     <p>Missed Score: {missed}</p>
