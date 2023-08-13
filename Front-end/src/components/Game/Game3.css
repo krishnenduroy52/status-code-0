@@ -1,6 +1,9 @@
 /* src/game3.css */
 .Game3 {
   text-align: center;
+}
+
+h1{
   margin-top: 100px;
 }
 
@@ -14,6 +17,7 @@
   padding: 10px;
   display: inline-block;
   border-radius: 1.5rem;
+  color: white;
 }
 
 .correct-answer {
@@ -45,4 +49,13 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+.check_btn{
+  margin-bottom: 100px;
+}
+
+.game3-over{
+  color: white;
+
 }
