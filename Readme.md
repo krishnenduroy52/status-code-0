@@ -25,7 +25,13 @@
 <br/>
 <br/>
 
+<br/>
+<br/>
 
+  ###[Dyslexia](#child_disoder)
+![Imgur](https://i.imgur.com/qLdp1iW.png)
+<br/>
+<br/>
 
   ### [NFT](#NFT)
 ![NFT of Models](https://i.imgur.com/taYdLFo.png)

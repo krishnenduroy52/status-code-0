@@ -129,7 +129,7 @@ const Game1 = () => {
             {letter &&
               letter.map((item, index) => (
                 <div class="box1" onClick={() => handleClick(index)}>
-                  <h1>{letter[index]}</h1>
+                  <h1 style={{marginBottom: '6rem'}}>{letter[index]}</h1>
                 </div>
               ))}
           </div>
