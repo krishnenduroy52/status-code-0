@@ -104,7 +104,7 @@ function Chat() {
             className="fa-margin"
             style={{ color: "red" }}
           />
-          Doctor.AI Health Assistant is for informational purposes only. Don’t
+          MedWISE.AI Health Assistant is for informational purposes only. Don’t
           take any actions without a doctor’s validation or consultation.
         </p>
       </div>

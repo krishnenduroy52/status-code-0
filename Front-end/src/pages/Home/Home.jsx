@@ -93,6 +93,7 @@ const Home = () => {
                     <span>T</span>
                     <span>T</span>
                     <span>E</span>
+                    <span>R</span>
                   </a>
                 </div>
               </div>
