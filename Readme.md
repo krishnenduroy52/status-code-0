@@ -28,7 +28,7 @@
 <br/>
 <br/>
 
-  ###[Dyslexia](#child_disoder)
+  ### [Dyslexia](#child_disoder)
 ![Imgur](https://i.imgur.com/qLdp1iW.png)
 <br/>
 <br/>
